@@ -1,3 +1,3 @@
 # Python
 
-Collection of simple short python code from various online problem-solving websites.
+Collection of python code from various online problem-solving websites.
