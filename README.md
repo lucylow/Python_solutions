@@ -1,3 +1,3 @@
 # Python
 
-Collection of my python code.
+Sample solutions for technical interview questions in python.
