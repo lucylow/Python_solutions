@@ -1,0 +1,39 @@
+
+
+'''
+500 leetcode
+
+Given a List of words, return the words that can be typed using letters of alphabet on only one row's of American keyboard.
+
+
+Input: ["Hello", "Alaska", "Dad", "Peace"]
+Output: ["Alaska", "Dad"]
+
+'''
+# words = list of strings 
+def findWords(words): 
+
+	# set = unordered collectino of items, each element unique and immutable ( but set iself is mutable, st we can add/remove things from it)
+	# set() is an undereturns unordered unique values) 
+	row1 = set("qwertyuiop")
+	row2 = set("asdfghjkl")
+	row3 = set("zxcvbnm")
+
+	answer = [] #empty list sto store answers 
+
+	for word in words:
+
+		# change the word into a "set" of data... 
+		x = set(word)
+
+		# & implies intersection of the two sets...
+		if row1 & x == x:
+			answer.append(word)
+		if row2 & x == x:
+			answer.append(word) 
+		if row3 & x == x:
+			answer.append(word) 
+
+	return answer # list is full of solution words after going thorugh for loop 
+
+
