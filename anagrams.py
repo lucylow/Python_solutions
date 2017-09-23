@@ -11,30 +11,18 @@ You may assume the string contains only lowercase alphabets.
 
 '''
 
-#my attempt
-def isAanagram(s,t):
-	s, t = s.split(), t.split()
-	if sorted(s) ==sorted(t):
-		return True
-	else:
-		return False
+def anagram(s1, s2):
+	dic1 = {}
+	#dic2 = {}
+	for i in s1:
+		if i not in dic1:
+			dic1[i] = 1 
+		else:
+			dic1[i] += 1
 
-# simple not effective
-def isAnagram(s, t):
-        return sorted(s) == sorted(t)
-
-#creative 
-
-def isAanagram(s, t):
-	return all(s.count(x) == t.count(x) for x in 'abcdefghijklmnopqrstuvwxzy')
-
-
-#other
-def isAnagram(s, t):
-        if set(s) != set(t):
-            return False
-        else:
-            for  element in set(s):
-                if s.count(element) != t.count(element):
-                    return False
-            return True
+	for i in s2:
+		if i not in dic1 or dic1[i] == 0:
+			return False
+		else:
+			dic1[i] -= 1
+	return True
