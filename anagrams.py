@@ -12,7 +12,7 @@ You may assume the string contains only lowercase alphabets.
 '''
 
 #my attempt
-def foo(s,t):
+def isAanagram(s,t):
 	s, t = s.split(), t.split()
 	if sorted(s) ==sorted(t):
 		return True
@@ -20,28 +20,17 @@ def foo(s,t):
 		return False
 
 # simple not effective
-class Solution:
-    # @param {string} s
-    # @param {string} t
-    # @return {boolean}
-    def isAnagram(self, s, t):
+def isAnagram(s, t):
         return sorted(s) == sorted(t)
-
-
 
 #creative 
 
- return all(s.count(x) == t.count(x) for x in 'abcdefghijklmnopqrstuvwxzy')
+def isAanagram(s, t):
+	return all(s.count(x) == t.count(x) for x in 'abcdefghijklmnopqrstuvwxzy')
 
 
 #other
-
-    def isAnagram(self, s, t):
-        """
-        :type s: str
-        :type t: str
-        :rtype: bool
-        """
+def isAnagram(s, t):
         if set(s) != set(t):
             return False
         else:
