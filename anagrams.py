@@ -13,7 +13,6 @@ You may assume the string contains only lowercase alphabets.
 
 def anagram(s1, s2):
 	dic1 = {}
-	#dic2 = {}
 	for i in s1:
 		if i not in dic1:
 			dic1[i] = 1 
