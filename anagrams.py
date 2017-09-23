@@ -18,7 +18,6 @@ def anagram(s1, s2):
 			dic1[i] = 1 
 		else:
 			dic1[i] += 1
-
 	for i in s2:
 		if i not in dic1 or dic1[i] == 0:
 			return False
