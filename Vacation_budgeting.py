@@ -1,3 +1,4 @@
+# Functions for three different cost sinks
 def hotel_cost(nights):
     return 140 * nights
     
@@ -19,7 +20,8 @@ def rental_car_cost(days):
         cost -= 20 
     return cost 
 
+# Add up total costs
 def trip_cost(city, days, spending_money):
     return rental_car_cost(days) + hotel_cost(days) + plane_ride_cost(city) + spending_money
     
-print trip_cost("Los Angeles", 5, 600) 
+trip_cost("Los Angeles", 5, 600) 
